@@ -181,8 +181,6 @@ class Cash(Payment):
 
 
 
-
-
 # class Human():
 #     def __init__(self, name):
 #         self.name = name
