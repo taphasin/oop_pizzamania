@@ -1,7 +1,18 @@
-class Person:
-    def __init__(self, firstname, lastname, address, log_in,  account_status):
-        self._firstname = firstname
-        self._lastname = lastname
-        self._addressid = [address]
-        self._loginid = log_in
-        self._account_status = account_status
+from test_file import Register
+class System:
+    def __init__(self):
+        self.user_list = []
+
+    def add_user_in_user_list(self, user):
+        self.user_list.append(user)
+
+    def prin(self):
+        for i in self.user_list:
+            print("name" + i.firstname) 
+
+system = System()
+user1 = Register("Mr", "Racha",  "Tanagtaghoul", "racha@gmail.com","0816638801", "paul11")
+system.add_user_in_user_list(user1)
+
+system.prin()
+

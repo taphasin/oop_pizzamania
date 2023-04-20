@@ -33,6 +33,12 @@ class PaymentStatus(enum.Enum):
     CONFIRMED = 2
     CANCLED = 3
 
+class User:
+    def init(self, name, cart):
+        self.name = name
+        self.cart = cart
+
+
 class Person:
     def __init__(self, firstname, lastname, address, log_in,  account_status):
         self._firstname = firstname
@@ -42,11 +48,18 @@ class Person:
         self._account_status = account_status
         
 class Login:
-    def __init__(self, email, password, additional):
+    def __init__(self, email, password):
         self.__email = email
         self.__password = password
-        self.__additional = additional
-    
+
+class Register:
+    def __init__(self, nprefix, fname, lname ,email ,mobile ,password):
+        self.nameprefix = nprefix
+        self.firstname = fname
+        self.lastname = lname
+        self.email = email
+        self.mobile = mobile
+        self.password = password    
 class Address:
     def __init__(self, mooban, house, roadname, soi, subsoi, district, provoince, postalcode):
         self.__mooban = mooban
@@ -68,6 +81,11 @@ class Customer(Person):
         self.__cart = cart
         self.__order = order
   
+class Item:
+    def init__(self, pizza, crust, cheese):
+        self.pizza = pizza
+        self.crust = crust
+        self.cheese = cheese
 
 class Product():
     def __init__(self, name, picture, list_of_price, description):
