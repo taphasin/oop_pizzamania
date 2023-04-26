@@ -1,10 +1,10 @@
 from test_file import Register
 class System:
     def __init__(self):
-        self.user_list = []
+        self.__user_list = []
 
     def add_user_in_user_list(self, user):
-        self.user_list.append(user)
+        self.__user_list.append(user)
 
     def prin(self):
         for i in self.user_list:
